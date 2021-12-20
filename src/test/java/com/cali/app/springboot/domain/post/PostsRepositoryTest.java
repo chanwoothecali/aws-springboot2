@@ -13,10 +13,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PostRepositoryTest {
+public class PostsRepositoryTest {
     
     @Autowired
-    PostRepository postRepository;
+    PostsRepository postRepository;
     
     @After
     public void cleanup() {
