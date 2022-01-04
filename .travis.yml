@@ -25,6 +25,16 @@ deploy:
     local_dir: deploy
     wait-until-dployed: true
 
+  - provide: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: jungcali-springboot-build
+    key: aws-springboot2-jungcali.zip
+    bundle-type: zip
+    application: aws-springboot2-jungcali-group
+    region: ap-northeast-2
+    wait-until-dployed: true
+
 # Travis CI 서버의 Home
 cache:
   directories:
