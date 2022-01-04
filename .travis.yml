@@ -35,7 +35,7 @@ deploy:
     bucket: jungcali-springboot-build
     key: aws-springboot2-jungcali.zip
     bundle_type: zip
-    application: aws-springboot2
+    application: aws-springboot2-jungcali
     deployment_group: aws-springboot2-jungcali-group
     region: ap-northeast-2
     wait-until-deployed: true
