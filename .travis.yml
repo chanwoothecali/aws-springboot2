@@ -30,7 +30,7 @@ deploy:
     secret_access_key: $AWS_SECRET_KEY
     bucket: jungcali-springboot-build
     key: aws-springboot2-jungcali.zip
-    bundle-type: zip
+    bundle_type: zip
     application: aws-springboot2-jungcali-group
     region: ap-northeast-2
     wait-until-dployed: true
