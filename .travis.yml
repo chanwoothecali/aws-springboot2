@@ -9,6 +9,22 @@ branches:
 before_install:
   - chmod +x gradlew
 
+before_deploy:
+  - zip -r aws-springboot2-jungcali *
+  - mkdir -p deploy
+  - mv aws-springboot2-jungcali.zip deploy/aws-springboot2-jungcali.zip
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: jungcali-springboot-build
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private
+    local_dir: deploy
+    wait-until-dployed: true
+
 # Travis CI 서버의 Home
 cache:
   directories:
